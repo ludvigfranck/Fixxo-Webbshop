@@ -1,0 +1,28 @@
+.__banner-left {
+    background-color: $color-brown;
+    display: flex;
+    justify-content: space-evenly;
+    color: $color-white;
+    height: 400px;
+
+    .__banner-left-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            font-size: 45px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .__btn-theme {
+            width: 188px;
+            background-color: $color-dark;
+
+            &:hover {
+                background-color: $color-theme;
+            }
+        }
+    }
+}

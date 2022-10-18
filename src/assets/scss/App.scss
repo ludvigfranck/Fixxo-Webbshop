@@ -5,6 +5,8 @@
 
 @import './sections/Navbar';
 @import './sections/Showcase';
+@import './sections/BannerLeft';
+@import './sections/BannerRight';
 
 @media (min-width: 1600px) {
     .container {
