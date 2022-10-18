@@ -1,9 +1,10 @@
-import './App.css';
+import './App.min.css';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <>
-
+    <Navbar />
     </>
   );
 }
