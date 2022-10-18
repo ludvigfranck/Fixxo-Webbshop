@@ -4,6 +4,11 @@
 @import './core/General';
 
 @import './sections/Navbar';
+@import './sections/Showcase';
 
-
+@media (min-width: 1600px) {
+    .container {
+        max-width: $max-width;
+    }
+}
 

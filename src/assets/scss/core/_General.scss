@@ -7,11 +7,12 @@ html, body {
 a {
     color: $color-dark;
     text-decoration: none;
-}
-    a:hover {
+    
+    &:hover {
         color: $color-theme;
         text-decoration: underline;
     }
+}
 
 .__active {
     color: $color-theme;
@@ -22,6 +23,46 @@ a {
     background: linear-gradient(90deg, $linear-gradient-dark 0%, $linear-gradient-light 100%);
 }
 
-.bg-theme {
+.__bg-theme {
     background-color: $color-theme;
+}
+
+.__btn-theme {
+    position: relative;
+    text-align: center;
+    background-color: $color-theme;
+    color: $color-white;
+    padding: 20px 50px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: $color-white;
+        text-decoration: none;
+        background-color: $color-dark;
+    }
+
+    .__btn-theme-left {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+    }
+    .__btn-theme-right {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+    }
+
+    .__btn-theme-left {
+        border-left: 1px solid $color-white;
+        border-top: 1px solid $color-white;
+        top: 10px;
+        left: 10px;
+    }
+
+    .__btn-theme-right {
+        border-right: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+        bottom: 10px;
+        right: 10px;
+    }
 }
