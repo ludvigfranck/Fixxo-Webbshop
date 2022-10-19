@@ -7,7 +7,7 @@ function BannerRight() {
         <div className="__banner-right-content">
             <h1>Let's Be <br />Conscious</h1>
             <a className="__btn-theme" href="#">
-                <span class="__btn-theme-left"></span>
+                <span className="__btn-theme-left"></span>
                 SHOP NOW
                 <span className="__btn-theme-right"></span>
             </a>

@@ -1,10 +1,13 @@
 .__flashsale {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    padding: 0;
-    margin-bottom: 65px;
+    margin-bottom: 200px;
     height: 665px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 0;
+    }
 
     .__flashsale-box {
         background-color: $color-gray;

@@ -7,10 +7,10 @@ function BannerLeft() {
         <img src={BannerImg} />
         <div className="__banner-left-content">
             <h1>Pamela Reif's <br/> Top Picks</h1>
-            <a class="__btn-theme" href="#">
-                <span class="__btn-theme-left"></span>
+            <a className="__btn-theme" href="#">
+                <span className="__btn-theme-left"></span>
                 SHOP NOW
-                <span class="__btn-theme-right"></span>
+                <span className="__btn-theme-right"></span>
             </a>
         </div>
     </div>

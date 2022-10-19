@@ -5,15 +5,17 @@ import FlashsaleContainer from '../components/FlashsaleContainer'
 
 function Flashsale() {
   return (
-    <section className="__flashsale container">
+    <section className="__flashsale">
+      <div className="container">
         <FlashsaleContainer />
         <div className="d-flex justify-content-start">
         <FlashsaleCards />
         </div>
-        <div className="d-flex justify-content-end">
+                {/* <div className="d-flex justify-content-end">
           <FlashsaleCards />
         </div>
-        <FlashsaleContainer />
+        <FlashsaleContainer /> */}
+      </div>
     </section>
   )
 }

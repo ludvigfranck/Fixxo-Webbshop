@@ -5,7 +5,7 @@ function Card() {
     <div className="col">
         <div className="__card">
             <div className="__img">
-                <div class="__card-menu">
+                <div className="__card-menu">
                     <a href="#"><i className="fa-regular fa-heart"></i></a>
                     <a href="#"><i className="fa-regular fa-arrows-repeat"></i></a>
                     <a href="#"><i className="fa-regular fa-bag-shopping"></i></a>

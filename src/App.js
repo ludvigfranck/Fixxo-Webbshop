@@ -1,17 +1,18 @@
 import './App.min.css';
-import Banners from './sections/Banners';
-import FeaturedProducts from './sections/FeaturedProducts';
-import Flashsale from './sections/Flashsale';
-import Header from './sections/Header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomeView from './views/HomeView'
+import ContactView from './views/ContactsView'
+import NotFoundView from './views/NotFoundView';
 
 function App() {
   return (
-    <>
-      <Header />
-      <FeaturedProducts />
-      <Banners />
-      <Flashsale />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+        <Route path="/contacts" element={<ContactView />} />
+        <Route path="*" element={<NotFoundView />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

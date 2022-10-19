@@ -1,18 +1,21 @@
+//Fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+//Cores
 @import './core/Variables';
 @import './core/General';
+@import './core/Media';
 
+//Components
+@import './components/Card';
+
+//Sections
 @import './sections/Navbar';
 @import './sections/Showcase';
 @import './sections/FeaturedProducts';
 @import './sections/Banners';
 @import './sections/Flashsale';
-@import './sections/Card';
+@import './sections/CustomerInfo';
 
-@media (min-width: 1600px) {
-    .container {
-        max-width: $max-width;
-    }
-}
+
 
