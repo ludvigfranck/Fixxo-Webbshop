@@ -63,14 +63,6 @@ a:hover {
   right: 10px;
 }
 
-.__banners {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 70px;
-  padding: 0;
-}
-
 .__navbar {
   height: 100px;
 }
@@ -146,70 +138,76 @@ a:hover {
   max-width: 1110px;
 }
 
-.__banner-left {
+.__banners {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 70px;
+  padding: 0;
+}
+.__banners .__banner-left {
   background-color: #75695C;
   display: flex;
   justify-content: space-evenly;
   color: #ffffff;
   height: 400px;
 }
-.__banner-left .__banner-left-content {
+.__banners .__banner-left .__banner-left-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.__banner-left .__banner-left-content h1 {
+.__banners .__banner-left .__banner-left-content h1 {
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 40px;
 }
-.__banner-left .__banner-left-content .__btn-theme {
+.__banners .__banner-left .__banner-left-content .__btn-theme {
   width: 188px;
   background-color: #222529;
 }
-.__banner-left .__banner-left-content .__btn-theme:hover {
+.__banners .__banner-left .__banner-left-content .__btn-theme:hover {
   background-color: #FF7373;
 }
-
-.__banner-right {
+.__banners .__banner-right {
   background-color: #D9D9D9;
   display: flex;
   justify-content: space-evenly;
   height: 400px;
 }
-.__banner-right .__banner-right-content {
+.__banners .__banner-right .__banner-right-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #222529;
 }
-.__banner-right .__banner-right-content h1 {
+.__banners .__banner-right .__banner-right-content h1 {
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 40px;
 }
-.__banner-right .__banner-right-content .__btn-theme {
+.__banners .__banner-right .__banner-right-content .__btn-theme {
   width: 188px;
   background-color: #ffffff;
   color: #222529;
 }
-.__banner-right .__banner-right-content .__btn-theme:hover {
+.__banners .__banner-right .__banner-right-content .__btn-theme:hover {
   background-color: #FF7373;
   color: #ffffff;
 }
-.__banner-right .__banner-right-content .__btn-theme .__btn-theme-left {
+.__banners .__banner-right .__banner-right-content .__btn-theme .__btn-theme-left {
   border-left: 1px solid #222529;
   border-top: 1px solid #222529;
 }
-.__banner-right .__banner-right-content .__btn-theme:hover .__btn-theme-left {
+.__banners .__banner-right .__banner-right-content .__btn-theme:hover .__btn-theme-left {
   border-left: 1px solid #ffffff;
   border-top: 1px solid #ffffff;
 }
-.__banner-right .__banner-right-content .__btn-theme .__btn-theme-right {
+.__banners .__banner-right .__banner-right-content .__btn-theme .__btn-theme-right {
   border-right: 1px solid #222529;
   border-bottom: 1px solid #222529;
 }
-.__banner-right .__banner-right-content .__btn-theme:hover .__btn-theme-right {
+.__banners .__banner-right .__banner-right-content .__btn-theme:hover .__btn-theme-right {
   border-right: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
 }

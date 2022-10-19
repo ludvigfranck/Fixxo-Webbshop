@@ -1,6 +1,6 @@
 import React from 'react'
-import BannerLeft from './BannerLeft'
-import BannerRight from './BannerRight'
+import BannerLeft from '../components/BannerLeft'
+import BannerRight from '../components/BannerRight'
 
 function Banners() {
   return (

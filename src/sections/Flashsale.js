@@ -1,6 +1,6 @@
 import React from 'react'
-import FlashsaleCards from './FlashsaleCards'
-import FlashsaleContainer from './FlashsaleContainer'
+import FlashsaleCards from '../components/FlashsaleCards'
+import FlashsaleContainer from '../components/FlashsaleContainer'
 
 
 function Flashsale() {

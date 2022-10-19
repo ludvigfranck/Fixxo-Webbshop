@@ -1,0 +1,88 @@
+.__banners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+    padding: 0;
+
+    .__banner-left {
+        background-color: $color-brown;
+        display: flex;
+        justify-content: space-evenly;
+        color: $color-white;
+        height: 400px;
+    
+        .__banner-left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    
+            h1 {
+                font-size: 45px;
+                font-weight: 600;
+                margin-bottom: 40px;
+            }
+    
+            .__btn-theme {
+                width: 188px;
+                background-color: $color-dark;
+    
+                &:hover {
+                    background-color: $color-theme;
+                }
+            }
+        }
+    }
+
+    .__banner-right {
+        background-color: $color-medium-gray;
+        display: flex;
+        justify-content: space-evenly;
+        height: 400px;
+    
+        .__banner-right-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $color-dark;
+    
+            h1 {
+                font-size: 45px;
+                font-weight: 600;
+                margin-bottom: 40px;
+            }
+    
+            .__btn-theme {
+                width: 188px;
+                background-color: $color-white;
+                color: $color-dark;
+    
+                &:hover {
+                    background-color: $color-theme;
+                    color: $color-white;
+                }
+    
+                .__btn-theme-left {
+                    border-left: 1px solid $color-dark;
+                    border-top: 1px solid $color-dark;
+                }
+    
+                &:hover .__btn-theme-left {
+                    border-left: 1px solid $color-white;
+                    border-top: 1px solid $color-white;
+                }
+    
+                .__btn-theme-right {
+                    border-right: 1px solid $color-dark;
+                    border-bottom: 1px solid $color-dark;
+                }
+    
+                &:hover .__btn-theme-right {
+                    border-right: 1px solid $color-white;
+                    border-bottom: 1px solid $color-white;
+                }
+            }
+        }
+    }
+}
+

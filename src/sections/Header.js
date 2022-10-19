@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Showcase from './Showcase'
+import Navbar from '../components/Navbar'
+import Showcase from '../components/Showcase'
 
 
 function Header() {

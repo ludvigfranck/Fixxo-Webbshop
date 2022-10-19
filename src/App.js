@@ -1,8 +1,8 @@
 import './App.min.css';
-import Banners from './components/Banners';
-import FeaturedProducts from './components/FeaturedProducts';
-import Flashsale from './components/Flashsale';
-import Header from './components/Header';
+import Banners from './sections/Banners';
+import FeaturedProducts from './sections/FeaturedProducts';
+import Flashsale from './sections/Flashsale';
+import Header from './sections/Header';
 
 function App() {
   return (
