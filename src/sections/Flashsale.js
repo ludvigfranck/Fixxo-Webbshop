@@ -11,10 +11,6 @@ function Flashsale() {
         <div className="d-flex justify-content-start">
         <FlashsaleCards />
         </div>
-                {/* <div className="d-flex justify-content-end">
-          <FlashsaleCards />
-        </div>
-        <FlashsaleContainer /> */}
       </div>
     </section>
   )

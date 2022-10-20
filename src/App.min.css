@@ -303,14 +303,14 @@ a:hover {
 }
 
 .__flashsale {
-  margin-bottom: 200px;
-  height: 665px;
+  margin-bottom: 65px;
+  height: 100%;
 }
 .__flashsale .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  padding: 0;
+  height: 100%;
 }
 .__flashsale .__flashsale-box {
   background-color: #BBBBBB;
@@ -351,6 +351,10 @@ a:hover {
 }
 .__flashsale .__flashsale-cards {
   width: 70%;
+}
+
+.__flashsale-sec {
+  margin-bottom: 80px;
 }
 
 .__customer-info {
