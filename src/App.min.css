@@ -404,3 +404,23 @@ a:hover {
   background-color: #222529;
   color: #ffffff;
 }
+
+footer {
+  border-top: 1px solid #E6E6E6;
+  background-color: #F5F5F5;
+}
+footer .container {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+footer .__footer-icons {
+  width: 200px;
+  padding: 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .__footer-text {
+  font-size: 16px;
+  font-weight: 400;
+}

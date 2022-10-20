@@ -4,6 +4,7 @@ import FeaturedProducts from '../sections/FeaturedProducts'
 import Banners from '../sections/Banners'
 import Flashsale from '../sections/Flashsale'
 import CustomerInfo from '../sections/CustomerInfo'
+import Footer from '../sections/Footer'
 
 function HomeView() {
   return (
@@ -13,6 +14,7 @@ function HomeView() {
       <Banners />
       <Flashsale />
       <CustomerInfo />
+      <Footer />
     </>
   )
 }

@@ -1,0 +1,22 @@
+footer {
+    border-top: 1px solid $linear-gradient-dark;
+    background-color: $linear-gradient-light;
+
+    .container {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    } 
+
+    .__footer-icons {
+        width: 200px;
+        padding: 0;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .__footer-text {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
