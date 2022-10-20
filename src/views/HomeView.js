@@ -11,12 +11,12 @@ function HomeView() {
   return (
     <>
       <Header />
-      {/* <FeaturedProducts />
+      <FeaturedProducts />
       <Banners />
       <Flashsale />
       <FlashsaleSec />
       <CustomerInfo />
-      <Footer /> */}
+      <Footer />
     </>
   )
 }

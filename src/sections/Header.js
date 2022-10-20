@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="__gradient-gray">
       <Navbar />
-      {/* <Showcase /> */}
+      <Showcase />
     </header>
   )
 }
