@@ -403,6 +403,7 @@ a:hover {
 .__customer-info .__customer-info-box .__customer-info-icon:hover {
   background-color: #222529;
   color: #ffffff;
+  text-decoration: none;
 }
 
 footer {
