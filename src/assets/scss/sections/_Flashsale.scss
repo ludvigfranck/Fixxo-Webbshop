@@ -22,36 +22,6 @@
             color: $color-white;
             margin-bottom: 35px;
         }
-
-        .__btn-theme {
-            background-color: $color-white;
-            color: $color-dark;
-
-            &:hover {
-                background-color: $color-dark;
-                color: $color-white;
-
-                .__btn-theme-left {
-                    border-left: 1px solid $color-white;
-                    border-top: 1px solid $color-white;
-                }
-
-                .__btn-theme-right {
-                    border-right: 1px solid $color-white;
-                    border-bottom: 1px solid $color-white;
-                }
-            }
-
-            .__btn-theme-left {
-                border-left: 1px solid $color-dark;
-                border-top: 1px solid $color-dark;
-            }
-
-            .__btn-theme-right {
-                border-right: 1px solid $color-dark;
-                border-bottom: 1px solid $color-dark;
-            }
-        }
     }
 
     .__flashsale-cards {

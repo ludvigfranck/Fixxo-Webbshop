@@ -62,22 +62,22 @@
                     color: $color-white;
                 }
     
-                .__btn-theme-left {
+                .__corner-left {
                     border-left: 1px solid $color-dark;
                     border-top: 1px solid $color-dark;
                 }
     
-                &:hover .__btn-theme-left {
+                &:hover .__corner-left {
                     border-left: 1px solid $color-white;
                     border-top: 1px solid $color-white;
                 }
     
-                .__btn-theme-right {
+                .__corner-right {
                     border-right: 1px solid $color-dark;
                     border-bottom: 1px solid $color-dark;
                 }
     
-                &:hover .__btn-theme-right {
+                &:hover .__corner-right {
                     border-right: 1px solid $color-white;
                     border-bottom: 1px solid $color-white;
                 }

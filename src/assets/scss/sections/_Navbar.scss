@@ -1,10 +1,12 @@
 .__navbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "logo navicons"
-                         "navlinks navlinks";
-    padding-top: 10px;
-    padding-bottom: 10px;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo navicons"
+                             "navlinks navlinks";
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
     .__logo {
         grid-area: logo;
@@ -92,11 +94,13 @@
 
 @media (min-width: 1200px) {
     .__navbar {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: "logo navlinks navicons";
-        padding-top: 20px;
-        padding-bottom: 20px;
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "logo navlinks navicons";
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
 
         .__nav-links {
             grid-area: navlinks;

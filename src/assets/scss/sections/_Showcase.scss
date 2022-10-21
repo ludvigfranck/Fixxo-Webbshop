@@ -1,8 +1,12 @@
 .__showcase {
     margin-bottom: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .__img-left {
         display: none;
@@ -29,34 +33,37 @@
             margin-bottom: 10px;
             font-size: 9px;
         }
+    }
+    .__btn-theme {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 0;
+        width: 100px;
+        height: 30px;
 
-        .__btn-theme {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            padding: 10px 30px;
+        .__btn-text {
+            font-size: 8px;
+        }
 
-            .__btn-text {
-                font-size: 8px;
-            }
+        .__corner-left {
+            display: none;
+        }
 
-            .__btn-theme-left {
-                display: none;
-            }
-
-            .__btn-theme-right {
-                display: none;
-            }
+        .__corner-right {
+            display: none;
         }
     }
 }
 
 @media (min-width: 992px) {
     .__showcase {
-        padding: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        .container {
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
 
         .__img-left {
             display: block;
@@ -86,10 +93,11 @@
 
             .__btn-theme {
                 position: relative;
-                padding: 16px 44px;
+                width: 120px;
+                height: 40px;
                 border-radius: 0;
-
-                .__btn-theme-left {
+    
+                .__corner-left {
                     display: inline;
                     position: absolute;
                     top: 6px;
@@ -97,8 +105,8 @@
                     width: 15px;
                     height: 15px;
                 }
-
-                .__btn-theme-right {
+    
+                .__corner-right {
                     display: inline;
                     position: absolute;
                     bottom: 6px;
@@ -127,20 +135,21 @@
             }
 
             .__btn-theme {
-                padding: 20px 50px;
+                width: 188px;
+                height: 60px;
 
                 .__btn-text {
                     font-size: 16px;
                 }
 
-                .__btn-theme-left {
+                .__corner-left {
                     width: 20px;
                     height: 20px;
                     top: 10px;
                     left: 10px;
                 }
 
-                .__btn-theme-right {
+                .__corner-right {
                     width: 20px;
                     height: 20px;
                     right: 10px;

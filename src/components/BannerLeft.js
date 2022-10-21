@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import BannerImg from '../assets/images/img/bannerImgLeft.jpg'
 
 function BannerLeft() {
@@ -7,11 +8,11 @@ function BannerLeft() {
         <img src={BannerImg} />
         <div className="__banner-left-content">
             <h1>Pamela Reif's <br/> Top Picks</h1>
-            <a className="__btn-theme" href="#">
-                <span className="__btn-theme-left"></span>
+            <NavLink className="__btn-theme" href="#">
+                <span className="__corner-left"></span>
                 SHOP NOW
-                <span className="__btn-theme-right"></span>
-            </a>
+                <span className="__corner-right"></span>
+            </NavLink>
         </div>
     </div>
   )
