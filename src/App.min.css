@@ -196,6 +196,13 @@ a:hover {
   color: #ffffff;
   background-color: #222529;
 }
+.__navbar .__nav-icon-links .__btn-nav-icon {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #222529;
+}
 
 @media (min-width: 1200px) {
   .__navbar {
