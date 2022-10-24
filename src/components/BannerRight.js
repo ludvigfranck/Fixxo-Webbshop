@@ -13,7 +13,7 @@ function BannerRight() {
                 <span className="__corner-right"></span>
             </NavLink>
         </div>
-        <img src={BannerImg} />
+        <img className="__banner-right-img" src={BannerImg} />
     </div>
   )
 }

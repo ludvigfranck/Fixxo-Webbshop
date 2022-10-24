@@ -2,9 +2,7 @@ import React from 'react'
 import ProductCard from '../components/ProductCard'
 
 function ProductGrid({title, products}) {
-  
 
-  
   return (
     <section className="product-grid">
         <div className="container">

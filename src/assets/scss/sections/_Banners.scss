@@ -1,26 +1,25 @@
 .__banners {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 30px;
     margin-bottom: 70px;
-    padding: 0;
 
     .__banner-left {
-        background-color: $color-brown;
-        display: flex;
-        justify-content: space-evenly;
         color: $color-white;
-        height: 400px;
-    
+        padding: 30px 10px;
+        background-color: $color-brown;
+
+        .__banner-left-img {
+            display: none;
+        }
+
         .__banner-left-content {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
     
             h1 {
-                font-size: 45px;
-                font-weight: 600;
-                margin-bottom: 40px;
+                font-size: 20px;
             }
     
             .__btn-theme {
@@ -35,21 +34,21 @@
     }
 
     .__banner-right {
+        padding: 30px 10px;
         background-color: $color-medium-gray;
-        display: flex;
-        justify-content: space-evenly;
-        height: 400px;
-    
+
+        .__banner-right-img {
+            display: none;
+        }
+
         .__banner-right-content {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: $color-dark;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
     
             h1 {
-                font-size: 45px;
-                font-weight: 600;
-                margin-bottom: 40px;
+                font-size: 20px;
             }
     
             .__btn-theme {
@@ -86,3 +85,80 @@
     }
 }
 
+@media (min-width: 992px) {
+    .__banners {
+        grid-template-columns: 1fr 1fr;
+        height: 265px;
+
+        .__banner-left { 
+            padding: 30px 0;   
+            display: flex;
+            justify-content: center;
+
+            .__banner-left-content {
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h1 {
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                    font-size: 45px;
+                }
+            }
+        }
+
+        .__banner-right {
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+
+            .__banner-right-content {
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h1 {
+                    font-weight: 700;
+                    margin-bottom: 30px;
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .__banners {
+        height: 400px;
+        .__banner-left {
+            padding: 0;
+            justify-content: space-around;
+
+            .__banner-left-img {
+                display: block;
+            }
+
+            .__banner-left-content {
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
+
+        .__banner-right {
+            padding: 0;
+            justify-content: space-around;
+
+            .__banner-right-img {
+                display: block;
+            }
+
+            .__banner-right-content {
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
+    }
+}

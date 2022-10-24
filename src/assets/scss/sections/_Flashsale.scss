@@ -1,15 +1,8 @@
 .__flashsale {
     margin-bottom: 65px;
-    height: 100%;
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        height: 100%;
-    }
 
     .__flashsale-box {
+        padding: 50px;
         background-color: $color-gray;
         display: flex;
         align-items: center;
@@ -17,18 +10,86 @@
         justify-content: center;
 
         h1 {
-            font-size: 45px;
+            font-size: 30px;
             font-weight: 600;
             color: $color-white;
             margin-bottom: 35px;
         }
+
+        .__btn-theme {
+            width: auto;
+        }
     }
 
-    .__flashsale-cards {
-        width: 70%;
+    .__flashsale-cards-container {
+        background-color: $color-medium-gray;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        .__show-cards-icon {
+            text-align: left;
+            width: 100%;
+            border: none;
+            font-size: 24px;
+            background-color: transparent;
+        }
+
+        .__flashsale-cards {
+            display: none;
+        }
+
+        .card {
+            background-color: transparent;
+        }
     }
 }
 
-.__flashsale-sec {
-    margin-bottom: 80px;
+@media (min-width: 768px) {
+    .__flashsale {
+        .__flashsale-cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .__flashsale-cards {
+                display: grid;
+                grid-template-columns: 250px 250px;
+                gap: 30px;
+            }
+        }
+    }
 }
+
+
+@media (min-width: 1200px) {
+    .__flashsale {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+
+            .__flashsale-box {
+                h1 {
+                    font-size: 45px;
+                }
+            }
+
+            .__flashsale-cards-container {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .__flashsale {
+        .container {
+            .__flashsale-cards-container {
+                align-items: flex-start;
+            }
+        }
+    }
+    
+}
+
+

@@ -31,7 +31,7 @@ function HomeView() {
       <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} />
       {/* <ProductGrid title="TOP PRODUCTS" products={topProducts} /> */}
       <Banners />
-      {/* <Flashsale /> */}
+      <Flashsale />
       {/* <FlashsaleSec /> */}
       {/* <CustomerInfo /> */}
       {/* <Footer /> */}
