@@ -27,12 +27,12 @@ function HomeView() {
   return (
     <>
       <Navbar />
-      <Showcase />
-      <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} />
+      {/* <Showcase /> */}
+      {/* <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} /> */}
       {/* <ProductGrid title="TOP PRODUCTS" products={topProducts} /> */}
-      <Banners />
-      <Flashsale />
+      {/* <Banners /> */}
       {/* <FlashsaleSec /> */}
+      <Flashsale />
       {/* <CustomerInfo /> */}
       {/* <Footer /> */}
     </>
