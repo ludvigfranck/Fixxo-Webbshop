@@ -24,10 +24,10 @@ function Flashsale() {
     <section className="__flashsale">
       <div className="container">
         <div className="__flashsale-box">
-          <h1>2 FOR USD $29</h1>
+          <h1>FLASHSALE</h1>
           <NavLink className="__btn-theme" href="#">
               <span className="__corner-left"></span>
-              SHOP NOW
+                SHOP NOW
               <span className="__corner-right"></span>
           </NavLink>
         </div>

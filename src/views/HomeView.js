@@ -3,10 +3,10 @@ import Banners from '../sections/Banners'
 import Flashsale from '../sections/Flashsale'
 import CustomerInfo from '../sections/CustomerInfo'
 import Footer from '../sections/Footer'
-import FlashsaleSec from '../sections/FlashsaleSec'
 import ProductGrid from '../sections/ProductGrid'
 import Navbar from '../sections/Navbar'
 import Showcase from '../sections/Showcase'
+import TopPicks from '../sections/TopPicks'
 
 function HomeView() {
 
@@ -27,14 +27,14 @@ function HomeView() {
   return (
     <>
       <Navbar />
-      {/* <Showcase /> */}
-      {/* <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} /> */}
+      <Showcase />
+      <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} />
       {/* <ProductGrid title="TOP PRODUCTS" products={topProducts} /> */}
-      {/* <Banners /> */}
-      {/* <FlashsaleSec /> */}
+      <Banners />
       <Flashsale />
-      {/* <CustomerInfo /> */}
-      {/* <Footer /> */}
+      <TopPicks />
+      <CustomerInfo />
+      <Footer />
     </>
   )
 }
