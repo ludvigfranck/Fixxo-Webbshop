@@ -5,7 +5,7 @@ import ImgRight from '../assets/images/svg/showcaseRight.svg'
 
 const Showcase = () => {
   return (
-    <section className="__showcase __gradient-gray">
+    <section className="__showcase">
       <div className="container">
       <img className="__img-left" src={ImgLeft} alt="placeholder left" />
         <div className="__showcase-body">

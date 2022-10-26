@@ -24,158 +24,79 @@
         padding-top: 20px;
 
         h1 {
-            font-size: 25px;
+            font-size: 34px;
             font-weight: 800;
         }
 
         p {
             margin-top: 5px;
-            margin-bottom: 10px;
-            font-size: 9px;
+            margin-bottom: 12px;
+            font-size: 12px;
         }
     }
     .__btn-theme {
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 10px;
-        padding: 0;
-        width: 100px;
-        height: 30px;
-
-        .__btn-text {
-            font-size: 8px;
-        }
-
-        .__corner-left {
-            display: none;
-        }
-
-        .__corner-right {
-            display: none;
-        }
-    }
-}
-
-@media (min-width: 992px) {
-    .__showcase {
-        .container {
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        .__img-left {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-
-        .__img-right {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-
-        .__showcase-body {
-            justify-content: center;
-
-            h1 {
-                font-size: 34px;
-                font-weight: 800;
-            }
-    
-            p {
-                font-size: 10px;
-                margin-top: 5px;
-                margin-bottom: 20px;
-            }
-
-            .__btn-theme {
-                position: relative;
-                width: 120px;
-                height: 40px;
-                border-radius: 0;
-    
-                .__corner-left {
-                    display: inline;
-                    position: absolute;
-                    top: 6px;
-                    left: 6px;
-                    width: 15px;
-                    height: 15px;
-                }
-    
-                .__corner-right {
-                    display: inline;
-                    position: absolute;
-                    bottom: 6px;
-                    right: 6px;
-                    width: 15px;
-                    height: 15px;
-                }
-            }
-        }
+        width: 188px;
     }
 }
 
 @media (min-width: 1200px) {
     .__showcase {
-        .__showcase-body {
-            h1 {
-                font-size: 48px;
+        .container {
+            justify-content: space-evenly;
+            flex-direction: row;
+
+            .__img-right {
+                display: block;
+                width: 500px;
             }
 
-            p {
-                font-size: 15px;
-                margin-top: 10px;
-                margin-bottom: 30px;
-            }
-
-            .__btn-theme {
-                width: 188px;
-                height: 60px;
-
-                .__btn-text {
-                    font-size: 16px;
+            .__showcase-body {
+                h1 {
+                    font-size: 50px;
                 }
 
-                .__corner-left {
-                    width: 20px;
-                    height: 20px;
-                    top: 10px;
-                    left: 10px;
-                }
-
-                .__corner-right {
-                    width: 20px;
-                    height: 20px;
-                    right: 10px;
-                    bottom: 10px;
+                p {
+                    font-size: 15px;
                 }
             }
         }
     }
+}
 
+@media (min-width: 1400px) {
+    .__showcase {
+        .container {
+            justify-content: space-between;
+            
+            .__img-left {
+                display: block;
+                width: 500px;
+            }
+        }
+    }
 }
 
 @media (min-width: 1600px) {
     .__showcase {
-        margin-bottom: 140px;
+        .container {
+            .__showcase-body {
+                h1 {
+                    font-size: 60px;
+                }
 
-        .__showcase-body {
-
-            h1 {
-                font-size: 65px;
-                font-weight: 800;
-            }
-    
-            p {
-                font-size: 20px;
+                p {
+                    font-size: 20px;
+                }
             }
         }
     }
 }
+
+
+
 
 
 

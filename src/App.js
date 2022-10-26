@@ -5,6 +5,7 @@ import ContactView from './views/ContactsView'
 import NotFoundView from './views/NotFoundView';
 import Products from './views/Products';
 import ProductDetailsView from './views/ProductDetailsView';
+import CategoryView from './views/CategoryView';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/contacts" element={<ContactView />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:name" element={<ProductDetailsView />} />
-
+        <Route path="/category" element={<CategoryView />} />
         <Route path="*" element={<NotFoundView />} />
       </Routes>
     </BrowserRouter>

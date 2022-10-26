@@ -11,12 +11,12 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="__navbar __gradient-gray">
+    <nav className="__navbar">
       <div className="container">
       <NavLink className="__logo" to="/" end>Fixxo.</NavLink>
       <div className={`__nav-links ${showMenu ? "d-grid" : ""}`}>
         <NavLink className="__nav-link" to="/" end>Home</NavLink>
-        <NavLink className="__nav-link" to="/categories" end>Category</NavLink>
+        <NavLink className="__nav-link" to="/category" end>Category</NavLink>
         <NavLink className="__nav-link" to="/products" >Products</NavLink>
         <NavLink className="__nav-link" to="/contacts" end>Contacts</NavLink>
       </div>

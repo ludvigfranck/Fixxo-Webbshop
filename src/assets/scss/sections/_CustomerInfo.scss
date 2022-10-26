@@ -5,7 +5,7 @@
     align-items: center;
 
     .__customer-info-border {
-        width: 90%;
+        width: 78%;
         border-top: 1px solid $linear-gradient-dark;
     }
 
@@ -40,6 +40,12 @@
                 justify-content: center;
                 align-items: center;
                 font-size: 18px;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $color-white;
+                    background-color: $color-dark;
+                }
             }
         }
     }
@@ -85,6 +91,15 @@
                     font-size: 16px;
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .__customer-info {
+        .container {
+            padding-left: 60px;
+            padding-right: 60px;
         }
     }
 }
