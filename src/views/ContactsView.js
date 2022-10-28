@@ -11,10 +11,10 @@ function ContactsView() {
   return (
     <>
       <Navbar />
-      {/* <Breadcrumb currentPage="Contacts" /> */}
-      {/* <MapSection /> */}
-      {/* <Footer /> */}
+      <Breadcrumb currentPage="Contacts" />
+      <MapSection />
       <ContactForm />
+      <Footer />
     </>
   )
 }
