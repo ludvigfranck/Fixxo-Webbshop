@@ -1,0 +1,114 @@
+.__speciality {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 400px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 65px;
+    background-color: $linear-gradient-light;
+
+    h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .container {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 35px;
+
+        .__speciality-box {
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            height: 100%;
+            background-color: $color-gray;
+
+            .__speciality-box-content {
+                text-align: center;
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                a {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $color-dark;
+                    text-decoration: underline;
+                }
+            }
+
+            .__gray-box {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .__speciality {
+        .container {
+            .__speciality-box {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                background-color: $color-white;
+
+                .__gray-box {
+                    display: block;
+                    height: 100%;
+                    background-color: $color-lightgray;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .__speciality {
+        position: relative;
+        justify-content: center;
+        padding-bottom: 0px;
+        align-items: center;
+
+        h1 {
+            position: absolute;
+            top: 35px;
+        }
+
+        .container {
+            height: 235px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: none;
+
+            .__speciality-box {
+                .__speciality-box-content {
+                    text-align: start;
+                    padding-left: 15px;
+
+                    a {
+                        &:after {
+                            content: "\00a0>\00a0";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .__speciality {
+        .container {
+            .__speciality-box {
+                .__speciality-box-content {
+                    padding-left: 40px;
+                }
+            }
+        }
+    }
+}

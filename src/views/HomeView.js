@@ -8,6 +8,8 @@ import Navbar from '../sections/Navbar'
 import Showcase from '../sections/Showcase'
 import TopPicks from '../sections/TopPicks'
 import HomeViewHeader from '../sections/HomeViewHeader'
+import NewArrivals from '../sections/NewArrivals'
+import SpecialitySection from '../sections/SpecialitySection'
 
 function HomeView() {
 
@@ -22,13 +24,15 @@ function HomeView() {
 
   return (
     <>
-      <HomeViewHeader />
-      <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} />
+      {/* <HomeViewHeader /> */}
+      <NewArrivals />
+      {/* <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} />
       <Banners />
+      <SpecialitySection />
       <Flashsale />
       <TopPicks />
       <CustomerInfo />
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

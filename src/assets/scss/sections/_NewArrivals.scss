@@ -1,0 +1,180 @@
+.__new-arrivals {
+    margin-bottom: 60px;
+
+    .container {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+
+        .__new-arrivals-box-left {
+            text-align: center;
+            background-color: $color-pink;
+
+            .__box-left-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 20px;
+                padding-top: 20px;
+
+                h1 {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+
+                p {
+                    display: none;
+                }
+
+                .__btn-theme {
+                    background-color: $color-dark;
+                    width: 188px;            
+                }
+            }
+
+            .__new-arrivals-img-left {
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        .__new-arrivals-box-right {
+            text-align: center;
+            background-color: $color-lightgray;
+
+            .__box-right-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                
+                h1 {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+    
+                .__btn-theme {
+                    background-color: $color-dark;
+                    width: 188px;            
+                }
+            }
+
+            .__new-arrivals-img-right {
+
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .__new-arrivals {
+        .container {
+            .__new-arrivals-box-left {
+                text-align: start;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding-left: 20px;
+                padding-right: 20px;
+
+                .__box-left-content {
+                    align-items: flex-start;
+                }
+
+                .__new-arrivals-img-left {
+                    height: 200px;
+
+                    img {
+                        display: inline;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .__new-arrivals-box-right {
+                text-align: start;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding-left: 20px;
+                padding-right: 20px;
+
+                .__box-right-content {
+                    align-items: flex-start;
+                }
+
+                .__new-arrivals-img-right {
+                    height: 200px;
+
+                    img {
+                        display: inline;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .__new-arrivals {
+        .container {
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+
+            .__new-arrivals-box-left {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .__new-arrivals {
+        .container {
+            grid-template-columns: 60% 40%;
+
+            .__new-arrivals-box-left {
+                grid-template-columns: 1fr 1fr;
+                height: 100%;
+
+                .__box-left-content {
+                    justify-content: center;
+
+                    h1 {
+                        font-size: 35px;
+                    }
+
+                    p {
+                        display: inline;
+                    }
+                }
+
+                .__new-arrivals-img-left {
+                    height: 400px;
+                }
+            }
+
+            .__new-arrivals-box-right {
+                .__box-right-content {
+                    justify-content: center;
+
+                    h1 {
+                        font-size: 35px;
+                    }
+                }
+
+                .__new-arrivals-img-right {
+                    height: 400px;
+                }
+            }
+        }
+    }
+}
