@@ -140,6 +140,7 @@
     .__new-arrivals {
         .container {
             grid-template-columns: 60% 40%;
+            height: 400px;
 
             .__new-arrivals-box-left {
                 grid-template-columns: 1fr 1fr;
@@ -155,6 +156,12 @@
                     p {
                         display: inline;
                     }
+
+                    .__btn-theme {
+                        &:hover {
+                            background-color: $color-theme;
+                        }
+                    }
                 }
 
                 .__new-arrivals-img-left {
@@ -168,6 +175,12 @@
 
                     h1 {
                         font-size: 35px;
+                    }
+
+                    .__btn-theme {
+                        &:hover {
+                            background-color: $color-theme;
+                        }
                     }
                 }
 

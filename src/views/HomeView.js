@@ -10,6 +10,7 @@ import TopPicks from '../sections/TopPicks'
 import HomeViewHeader from '../sections/HomeViewHeader'
 import NewArrivals from '../sections/NewArrivals'
 import SpecialitySection from '../sections/SpecialitySection'
+import DiscountSection from '../sections/DiscountSection'
 
 function HomeView() {
 
@@ -24,15 +25,16 @@ function HomeView() {
 
   return (
     <>
-      {/* <HomeViewHeader /> */}
+      <HomeViewHeader />
       <NewArrivals />
-      {/* <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} />
+      <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} />
       <Banners />
       <SpecialitySection />
       <Flashsale />
       <TopPicks />
+      <DiscountSection />
       <CustomerInfo />
-      <Footer /> */}
+      <Footer />
     </>
   )
 }

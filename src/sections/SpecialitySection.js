@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 function SpecialitySection() {
   return (
-    <section className="__speciality">
+    <section className="__speciality container">
         <h1>Our Speciality</h1>
         <div className="container">
             <div className="__speciality-box">
