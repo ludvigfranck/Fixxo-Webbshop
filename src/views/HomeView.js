@@ -4,13 +4,12 @@ import Flashsale from '../sections/Flashsale'
 import CustomerInfo from '../sections/CustomerInfo'
 import Footer from '../sections/Footer'
 import ProductGrid from '../sections/ProductGrid'
-import Navbar from '../sections/Navbar'
-import Showcase from '../sections/Showcase'
 import TopPicks from '../sections/TopPicks'
 import HomeViewHeader from '../sections/HomeViewHeader'
 import NewArrivals from '../sections/NewArrivals'
 import SpecialitySection from '../sections/SpecialitySection'
 import DiscountSection from '../sections/DiscountSection'
+import SaleGridSection from '../sections/SaleGridSection'
 
 function HomeView() {
 
@@ -25,16 +24,17 @@ function HomeView() {
 
   return (
     <>
-      <HomeViewHeader />
+      {/* <HomeViewHeader />
       <NewArrivals />
       <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} />
       <Banners />
       <SpecialitySection />
       <Flashsale />
       <TopPicks />
-      <DiscountSection />
-      <CustomerInfo />
-      <Footer />
+      <DiscountSection /> */}
+      <SaleGridSection />
+      {/* <CustomerInfo />
+      <Footer /> */}
     </>
   )
 }
