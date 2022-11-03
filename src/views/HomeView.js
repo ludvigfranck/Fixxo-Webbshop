@@ -24,17 +24,17 @@ function HomeView() {
 
   return (
     <>
-      {/* <HomeViewHeader />
+      <HomeViewHeader />
       <NewArrivals />
       <ProductGrid title="FEATURED PRODUCTS" products={featuredProducts} />
       <Banners />
       <SpecialitySection />
       <Flashsale />
       <TopPicks />
-      <DiscountSection /> */}
+      <DiscountSection />
       <SaleGridSection />
-      {/* <CustomerInfo />
-      <Footer /> */}
+      <CustomerInfo />
+      <Footer />
     </>
   )
 }

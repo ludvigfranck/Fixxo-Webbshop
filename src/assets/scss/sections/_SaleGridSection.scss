@@ -1,125 +1,99 @@
 .__sale-grid {
     margin-bottom: 65px;
+    margin-top: 60px;
 
     .container {
         max-width: $max-width-small;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
 
         .__sale-grid-products {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            background-color: $linear-gradient-light;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            border-radius: 10px;
+            margin-bottom: 35px;
 
             h1 {
                 font-size: 20px;
                 font-weight: 700;
-                margin-bottom: 20px;
+                margin-bottom: 40px;
             }
 
             .__sale-grid-cards {
-                display: flex;
+                display: none;
                 flex-direction: column;
+            }
 
-                .__sale-card {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 15px;
+            .__sale-grid-btn {
+                position: absolute;
+                width: 100%;
+                height: 40px;
+                font-weight: 600;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                bottom: 0;
+                border: none;
+                background-color: $color-gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .__sale-grid {
+        .container {
+            .__sale-grid-products {
+                background-color: transparent;
+
+                .__sale-grid-cards {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .__sale-grid {
+        .container {
+            .__sale-grid-products {
+                .__sale-grid-cards {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .__sale-grid {
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+    
+            .__sale-grid-products {
+                align-items: flex-start;
+                background-color: transparent;
+                margin-bottom: 0;
+
+                h1 {
                     margin-bottom: 20px;
+                }
 
-                    .__sale-card-img {
-                        background-color: $linear-gradient-light;
-                        width: 160px;
-                        height: 130px;
-                        position: relative;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                
-                        .__sale-card-menu {
-                            position: absolute;
-                            top: 10px;
-                            display: flex;
-                            justify-content: space-around;
-                            width: 100%;
-                
-                            .__sale-menu-link {
-                                position: relative;
-                                background-color: $color-white;
-                                color: $color-dark;
-                                width: 36px;
-                                height: 36px;
-                                border-radius: 50%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                box-shadow: 0 0 6px 4px $color-shadow;
-                                border: none;
-                                outline: none;
-                
-                                &:hover { 
-                                    color: $color-white;
-                                    background-color: $color-dark;
-                                    text-decoration: none;
-                                }
-                            }
-                        }
-                
-                        .__sale-btn-card-theme {
-                            position: absolute;
-                            bottom: 0;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: 100%;
-                            height: 42px;
-                            font-size: 12px;
-                            background-color: $color-theme;
-                            color: $color-white;
-                            transition: all 0.2s ease-in-out;
-
-                            &:hover {
-                                background-color: $color-dark;
-                                text-decoration: none;
-                            }
-                        }
-
-                        &:hover {
-
-                            .__sale-card-menu {
-                                display: flex !important;
-                            }
-                            .__sale-btn-card-theme {
-                                display: flex !important;
-                            }
-                        }
-                    }
-
-                    .__sale-card-body {
-                        text-align: start;
-
-                        .__sale-card-category {
-                            font-size: 13px;
-                            font-weight: 500;
-                            color: $color-dark-gray;
-                        }
-                
-                        .__sale-card-title {
-                            font-size: 16px;
-                            font-weight: 600;
-                        }
-                
-                        .__sale-card-rating {
-                            color: $color-theme;
-                        }
-                
-                        .__sale-card-prize {
-                            font-size: 18px;
-                            font-weight: 600;
-                        }
-                    }
+                .__sale-grid-cards {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    max-width: 100%;
                 }
             }
         }
