@@ -21,67 +21,40 @@ function SaleGridSection() {
     { id: 17, name: "Modern pants", category: "Top Reacted", price: "$23.00", rating: 5, img: "https://images.pexels.com/photos/934063/pexels-photo-934063.jpeg?cs=srgb&dl=pexels-ylanite-koppens-934063.jpg&fm=jpg&_gl=1*7v51xm*_ga*MTAwNzk0NTUzMy4xNjY1NjcwNjY3*_ga_8JE65Q40S6*MTY2NjM0OTgzMS41LjEuMTY2NjM1MDg1MC4wLjAuMA.."}
   ])
 
-  const [showCardsLP, setShowCardsLP] = useState()
-  const [showCardsBSP, setShowCardsBSP] = useState()
-  const [showCardsTRP, setShowCardsTRP] = useState()
+  const [showCardsLP, setShowCardsLP] = useState(false)
+  const [showCardsBSP, setShowCardsBSP] = useState(false)
+  const [showCardsTRP, setShowCardsTRP] = useState(false)
 
-  const toggleCardsLP = () => {
-    setShowCardsLP(!showCardsLP)
-  }
+  const toggleCards = (e) => {
+    const card = e.target
 
-  const toggleCardsBSP = () => {
-    setShowCardsBSP(!showCardsBSP)
-  }
+    switch(card.id) {
+      case '__toggle-LP':
+        setShowCardsLP(!showCardsLP)
+        toggleTextChange(e)
+        break;
 
-  const toggleCardsTRP = () => {
-    setShowCardsTRP(!showCardsTRP)
-  }
+      case '__toggle-BSP':
+        setShowCardsBSP(!showCardsBSP)
+        toggleTextChange(e)
+        break;
 
-  const toggleTextChangeLP = () => {
-    let btnTextLP = document.getElementById('__btn-text-1')
-    
-    if(btnTextLP.innerText === "Show More") {
-      btnTextLP.innerText = "Hide"
-    } else {
-      btnTextLP.innerText = "Show More"
-    }
-
-
-  }
-
-  const toggleTextChangeBSP = () => {
-    let btnTextBSP = document.getElementById('__btn-text-2')
-
-    if(btnTextBSP.innerText === "Show More") {
-      btnTextBSP.innerText = "Hide"
-    } else {
-      btnTextBSP.innerText = "Show More"
+      case '__toggle-TRP':
+        setShowCardsTRP(!showCardsTRP)
+        toggleTextChange(e)
+        break;
     }
   }
 
-  const toggleTextChangeTRP = () => {
-    let btnTextTRP = document.getElementById('__btn-text-3')
+  const toggleTextChange = (e) => {
+    switch(e.target.innerText) {
+      case 'Show More':
+        e.target.innerText = 'Hide'
+        break;
 
-    if(btnTextTRP.innerText === "Show More") {
-      btnTextTRP.innerText = "Hide"
-    } else {
-      btnTextTRP.innerText = "Show More"
+      default: 
+        e.target.innerText = 'Show More'
     }
-  }
-
-  const toggleChangeLP = () => {
-    toggleCardsLP()
-    toggleTextChangeLP()
-  }
-
-  const toggleChangeBSP = () => {
-    toggleCardsBSP()
-    toggleTextChangeBSP()
-  }
-
-  const toggleChangeTRP = () => {
-    toggleCardsTRP()
-    toggleTextChangeTRP()
   }
 
   return (
@@ -92,25 +65,27 @@ function SaleGridSection() {
         <div className={`__sale-grid-cards ${showCardsLP ? "d-flex" : ""}`}>
           <LatestProducts products={latestProducts}/>
         </div>
-        <button onClick={toggleChangeLP} className="__sale-grid-btn d-md-none" id="__btn-text-1">
+        <button onClick={toggleCards} className="__sale-grid-btn d-md-none" id="__toggle-LP">
           Show More
         </button>
       </div>
+
       <div className="__sale-grid-products">
         <h1>Best Selling Product</h1>
         <div className={`__sale-grid-cards ${showCardsBSP ? "d-flex" : ""}`}>
           <LatestProducts products={bestSellingProducts}/>
         </div>
-        <button onClick={toggleChangeBSP} className="__sale-grid-btn d-md-none" id="__btn-text-2">
+        <button onClick={toggleCards} className="__sale-grid-btn d-md-none" id="__toggle-BSP">
           Show More
         </button>
       </div>
+
       <div className="__sale-grid-products">
         <h1>Top Reacted Product</h1>
         <div className={`__sale-grid-cards ${showCardsTRP ? "d-flex" : ""}`}>
           <LatestProducts products={topReactedProducts}/>
         </div>
-        <button onClick={toggleChangeTRP} className="__sale-grid-btn d-md-none" id="__btn-text-3">
+        <button onClick={toggleCards} className="__sale-grid-btn d-md-none" id="__toggle-TRP">
           Show More
         </button>
       </div>
