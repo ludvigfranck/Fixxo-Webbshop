@@ -10,27 +10,28 @@ import NewArrivals from '../sections/NewArrivals'
 import SpecialitySection from '../sections/SpecialitySection'
 import DiscountSection from '../sections/DiscountSection'
 import SaleGridSection from '../sections/SaleGridSection'
-import { ProductContext } from '../contexts/contexts'
+import { FeaturedProductsContext, FlashsaleProductContext } from '../contexts/contexts'
 
 function HomeView() {
 
   window.top.document.title = "Fixxo."
 
-  const productContext = useContext(ProductContext)
+  const featuredProducts = useContext(FeaturedProductsContext);
+  const flashsaleProducts = useContext(FlashsaleProductContext);
 
   return (
     <>
-      {/* <HomeViewHeader />
+      <HomeViewHeader />
       <NewArrivals />
-      <ProductGrid title="FEATURED PRODUCTS" items={productContext.featuredProducts} />
+      <ProductGrid title="FEATURED PRODUCTS" items={featuredProducts} />
       <Banners />
-      <SpecialitySection /> */}
-      <Flashsale items={productContext.flashSaleProducts} />
-      <TopPicks items={productContext.topPicksProducts} />
-      {/* <DiscountSection /> */}
-      {/* <SaleGridSection /> */}
-      {/* <CustomerInfo />
-      <Footer /> */}
+      <SpecialitySection />
+      <Flashsale items={flashsaleProducts} />
+      {/* <TopPicks items={flashsaleProducts} /> */}
+      <DiscountSection />
+      <SaleGridSection />
+      <CustomerInfo />
+      <Footer />
     </>
   )
 }

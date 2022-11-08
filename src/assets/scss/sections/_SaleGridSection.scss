@@ -9,7 +9,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: $linear-gradient-light;
+            background-color: $linear-gradient-dark;
             padding-top: 20px;
             padding-bottom: 20px;
             position: relative;
@@ -25,6 +25,18 @@
             .__sale-grid-cards {
                 display: none;
                 flex-direction: column;
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    background-color: transparent;
+
+                    .card-menu {
+                        display: none !important;
+                    }
+                }
             }
 
             .__sale-grid-btn {
@@ -45,7 +57,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .__sale-grid {
         .container {
             .__sale-grid-products {
@@ -55,19 +67,6 @@
                     width: 100%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-evenly;
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 992px) {
-    .__sale-grid {
-        .container {
-            .__sale-grid-products {
-                .__sale-grid-cards {
-                    max-width: 80%;
                 }
             }
         }
@@ -78,22 +77,50 @@
     .__sale-grid {
         .container {
             display: flex;
-            justify-content: space-evenly;
-    
+
             .__sale-grid-products {
+                width: 100%;
+                padding-top: 0;
+                padding-bottom: 0;
                 align-items: flex-start;
-                background-color: transparent;
-                margin-bottom: 0;
 
                 h1 {
-                    margin-bottom: 20px;
+                    margin-bottom: 0;
                 }
 
                 .__sale-grid-cards {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    max-width: 100%;
+                    display: grid;
+
+                    .card {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        width: 100%;
+
+                        .card-img {
+                            img {
+                                width: 160px;
+                                height: 130px;
+                            }
+                        }
+
+                        .btn-card-theme {
+                            height: 40px;
+                            font-size: 12px;
+                            display: none;
+
+                            .__corner-left {
+                                display: none;
+                            }
+
+                            .__corner-right {
+                                display: none;
+                            }
+                        }
+
+                        .card-body {
+                            text-align: start;
+                        }
+                    }
                 }
             }
         }
