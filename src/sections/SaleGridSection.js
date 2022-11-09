@@ -1,10 +1,8 @@
 import React, { useState, useContext } from 'react'
 import SaleCards from '../components/SaleCards'
-import { SaleProductContext } from '../contexts/contexts'
 
 function SaleGridSection() {
 
-  const saleProducts = useContext(SaleProductContext)
 
   const [showCardsLP, setShowCardsLP] = useState(false)
   const [showCardsBSP, setShowCardsBSP] = useState(false)
@@ -48,32 +46,32 @@ function SaleGridSection() {
         <div className="__sale-grid-products">
           <h1>Latest Products</h1>
           <div className={`__sale-grid-cards ${showCardsLP ? "d-flex" : ""}`}>
-            <SaleCards items={saleProducts} />
+            <SaleCards />
           </div>
           <button onClick={toggleCards} className="__sale-grid-btn d-lg-none" id="__toggle-LP">
             Show More
           </button>
         </div>
 
-      <div className="__sale-grid-products">
-        <h1>Best Selling Product</h1>
-        <div className={`__sale-grid-cards ${showCardsBSP ? "d-flex" : ""}`}>
-          <SaleCards items={saleProducts} />
+        <div className="__sale-grid-products">
+          <h1>Best Selling Product</h1>
+          <div className={`__sale-grid-cards ${showCardsBSP ? "d-flex" : ""}`}>
+            <SaleCards />
+          </div>
+          <button onClick={toggleCards} className="__sale-grid-btn d-lg-none" id="__toggle-BSP">
+            Show More
+          </button>
         </div>
-        <button onClick={toggleCards} className="__sale-grid-btn d-lg-none" id="__toggle-BSP">
-          Show More
-        </button>
-      </div>
 
-      <div className="__sale-grid-products">
-        <h1>Top Reacted Product</h1>
-        <div className={`__sale-grid-cards ${showCardsTRP ? "d-flex" : ""}`}>
-          <SaleCards items={saleProducts} />
+        <div className="__sale-grid-products">
+          <h1>Top Reacted Product</h1>
+          <div className={`__sale-grid-cards ${showCardsTRP ? "d-flex" : ""}`}>
+            <SaleCards />
+          </div>
+          <button onClick={toggleCards} className="__sale-grid-btn d-lg-none" id="__toggle-TRP">
+            Show More
+          </button>
         </div>
-        <button onClick={toggleCards} className="__sale-grid-btn d-lg-none" id="__toggle-TRP">
-          Show More
-        </button>
-      </div>
       </div>
     </section>
   )
