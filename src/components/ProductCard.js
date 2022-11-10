@@ -15,7 +15,7 @@ function ProductCard({item}) {
             <button className="menu-link"><i className="fa-regular fa-code-compare"></i></button>
             <button onClick={() => incrementQuantity({articleNumber: item.articleNumber, product: item})} className="menu-link"><i className="fa-regular fa-bag-shopping"></i></button>
           </div>
-          <NavLink to={`/products/${item.name.toLowerCase().replace(/ /gi, "-")}`} className="__btn-theme btn-card-theme d-xl-none">
+          <NavLink to={`/products/${item.articleNumber}`} className="__btn-theme btn-card-theme d-xl-none">
             <span className="__corner-left"></span>
             <span className="__corner-right"></span>
             QUICK VIEW
@@ -25,7 +25,7 @@ function ProductCard({item}) {
           <p className="card-category">{item.category}</p>
           <h5 className="card-title">{item.name}</h5>
           <p className="card-rating">
-          <i className="fa-sharp fa-solid fa-star"></i>
+            <i className="fa-sharp fa-solid fa-star"></i>
             <i className="fa-sharp fa-solid fa-star"></i>
             <i className="fa-sharp fa-solid fa-star"></i>
             <i className="fa-sharp fa-solid fa-star"></i>

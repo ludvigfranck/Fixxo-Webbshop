@@ -1,0 +1,66 @@
+form {
+   
+    .size {
+        display: flex;
+        align-items: center;
+
+        h5 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .size-list {
+            padding: 0;
+            display: flex;
+            margin-left: 50px;
+
+            li {
+                list-style: none;
+
+                input {
+                    display: none;
+                }
+
+                label {
+                    border: 1px solid $color-dark;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+
+                #small:checked ~ label[for="small"],
+                #medium:checked ~ label[for="medium"],
+                #large:checked ~ label[for="large"],
+                #x-large:checked ~ label[for="x-large"] {
+                    background-color: $color-dark;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    .color {
+        display: flex;
+        
+        h5 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .dropdown-btn {
+            margin-left: 36px;
+            font-size: 14px;
+            width: 210px;
+            color: $color-dark;
+            background-color: $color-white;
+        }
+    }
+
+    .submit {
+        border: 1px solid black;
+        
+    }
+}

@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomeView from './views/HomeView'
 import ContactView from './views/ContactsView'
 import NotFoundView from './views/NotFoundView';
-import Products from './views/Products';
+import Products from './views/ProductsView';
 import ProductDetailsView from './views/ProductDetailsView';
 import CategoryView from './views/CategoryView';
 import { ProductProvider } from './contexts/ProductContext';
@@ -21,7 +21,7 @@ function App() {
           <Route path="/" element={<HomeView />} />
           <Route path="/contacts" element={<ContactView />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/products/:name" element={<ProductDetailsView />} />
+          <Route path="/products/:id" element={<ProductDetailsView />} />
           <Route path="/category" element={<CategoryView />} />
           <Route path="*" element={<NotFoundView />} />
         </Routes>

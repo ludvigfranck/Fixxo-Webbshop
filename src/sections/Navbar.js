@@ -26,13 +26,11 @@ const Navbar = () => {
       <div className="__nav-icon-links">
         <NavbarLinks link="/search" icon="fa-regular fa-magnifying-glass" badge="" />
         <NavbarLinks hideOnMobile={true} link="/compare" icon="fa-regular fa-code-compare" badge="" />
-        <NavbarLinks hideOnMobile={true} link="/wishlist" icon="fa-regular fa-heart" badge="2" />
-        
+        <NavbarLinks hideOnMobile={true} link="/wishlist" icon="fa-regular fa-heart" badge="" />
         <button className="__nav-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
           <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{cartQuantity}</span>
           <i className="fa-regular fa-bag-shopping"></i>
         </button>
-        
         <button onClick={toggleMenu} className="__nav-icon __btn-nav-icon d-xl-none"><i className="fa-regular fa-bars"></i></button>
       </div>
       </div>
