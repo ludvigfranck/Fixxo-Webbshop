@@ -13,12 +13,12 @@ function ShoppingCartItem({ item }) {
                 <div className="item-info-name">{item.product.name}</div>
                 <div className="item-info-quantity">
                     <button onClick={() => incrementQuantity(item.product)}>+</button>
-                    <div>{item.quantity}</div>
+                    <div className="item-quantity">{item.quantity}</div>
                     <button onClick={() => decrementQuantity(item.product)}>-</button>
                 </div>
             </div>
             <div className="item-price">
-                <div>{item.product.price * item.quantity}</div>
+                <div>{item.product.price * item.quantity} SEK</div>
                 <button onClick={() => removeItem(item.articleNumber)}><i className="fa-regular fa-trash"></i></button>
             </div>
         </div>

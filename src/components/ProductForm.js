@@ -23,6 +23,12 @@ const handleSubmit = (e) => {
   e.preventDefault()
 }
 
+/*
+Fick inte till så att prduktens quantity läggs till i ShoppingCart men det funkar 
+att lägga till en product. 
+Färg och size är likadant, man kan välja men inget händer när man submittar. 
+*/
+
 return (
   <div className="product-form">
     <form onSubmit={handleSubmit}>

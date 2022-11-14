@@ -11,7 +11,6 @@ import SpecialitySection from '../sections/SpecialitySection'
 import DiscountSection from '../sections/DiscountSection'
 import SaleGridSection from '../sections/SaleGridSection'
 import { useProductContext } from '../contexts/ProductContext'
-import Counter from '../sections/Counter'
 
 function HomeView() {
 
@@ -27,9 +26,8 @@ function HomeView() {
 
   return (
     <>
-      {/* <HomeViewHeader /> */}
-      <Counter init={0} />
-      {/* <NewArrivals />
+      <HomeViewHeader />
+      <NewArrivals />
       <ProductGrid title="FEATURED PRODUCTS" items={featuredProducts}/>
       <Banners />
       <SpecialitySection />
@@ -38,7 +36,7 @@ function HomeView() {
       <DiscountSection />
       <SaleGridSection />
       <CustomerInfo />
-      <Footer /> */}
+      <Footer />
     </>
   )
 }

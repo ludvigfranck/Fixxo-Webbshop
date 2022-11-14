@@ -5,11 +5,11 @@
     align-items: center;
 
     .__customer-info-border {
-        width: 78%;
         border-top: 1px solid $linear-gradient-dark;
     }
 
     .container {
+        max-width: $max-width-small;
         padding-top: 30px;
         display: flex;
         justify-content: space-evenly;
@@ -81,6 +81,10 @@
 
 @media (min-width: 1200px) {
     .__customer-info {
+        .__customer-info-border {
+            width: $max-width-small;
+        }
+
         .container {
             .__customer-info-box {
                 .__customer-info-title {
@@ -95,11 +99,3 @@
     }
 }
 
-@media (min-width: 1400px) {
-    .__customer-info {
-        .container {
-            padding-left: 60px;
-            padding-right: 60px;
-        }
-    }
-}

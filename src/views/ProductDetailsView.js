@@ -20,7 +20,11 @@ useEffect(() => {
   getProduct(id)
   getRelatedProducts(4)
 }, [])
-  
+
+/*
+Det ser väldigt rörigt ut, jag vet... men designen finns där iallafall :)
+*/
+
 return (
     <>
     <Navbar />
