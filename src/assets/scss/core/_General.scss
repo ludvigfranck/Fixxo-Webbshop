@@ -15,6 +15,16 @@ html, body {
     background-color: $linear-gradient-light;
 }
 
+.fixxo-sale {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    .fixxo-sale-title {
+        color: $color-theme;
+    }
+}
+
 a {
     color: $color-theme;
     text-decoration: none;

@@ -22,6 +22,9 @@ useEffect(() => {
 return (
     <>
     <Navbar />
+    <div className="fixxo-sale container">
+      <p className="fixxo-sale-title">Get 25% OFF at the Fixxo Selection - Shop Now!</p>
+    </div>
     <Breadcrumb parentPage="Products" currentPage={product.name} />
     <ProductDetails item={product} />
     <ProductInfoText />

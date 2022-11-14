@@ -1,6 +1,7 @@
 form {
-    display: grid;
-    grid-template-columns: 0fr 3fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h5 {
         font-size: 18px;
@@ -9,6 +10,7 @@ form {
         height: 40px;
         display: flex;
         align-items: center;
+        display: none;
     }
    
     .size {
@@ -116,14 +118,15 @@ form {
     .submit {
         width: 85%;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
         height: auto;
         margin-bottom: 30px;
 
         .quantity-box {
             display: flex;
             align-items: center;
+            margin-bottom: 30px;
 
             .quantity {
                 height: 50px;
@@ -178,6 +181,26 @@ form {
                 line-height: 40px;
                 background-color: #F4F4F4;
                 color: $color-dark;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    form {
+        display: grid;
+        grid-template-columns: 0fr 1fr;
+
+        h5 {
+            display: block;
+        }
+
+        .submit {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .quantity-box {
+                margin-bottom: 0;
             }
         }
     }

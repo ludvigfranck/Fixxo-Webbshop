@@ -2,7 +2,7 @@
     border-bottom: 1px solid $color-gray;
     padding-bottom: 10px;
     width: 540px;
-    display: flex;
+    display: none;
     justify-content: space-between;
 
     .tab-link {
@@ -20,12 +20,24 @@
     }
 }
 
-.tab-content {
-    margin-top: 10px;
-    width: $max-width-small;
+.tab-container {
+    display: none;
 
-    .subscription-tab {
-        border: 1px solid black;
+    .tab-content {
+        margin-top: 10px;
+        width: $max-width-small;
     }
 }
+
+@media (min-width: 1200px) {
+    .text-titles {
+        display: flex;
+    }
+
+    .tab-container {
+        display: block;
+    }
+}
+
+
 

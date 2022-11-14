@@ -2,20 +2,18 @@
     margin-bottom: 60px;
 
     .container {
-        max-width: $max-width-small;
-        padding: 0;
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 20px;
+        max-width: auto;
 
         .product-images {
             width: 100%;
-            display: grid;
-            gap: 30px;
+            display: flex;
+            justify-content: center;
 
             .main-image {
-                width: 540px;
-                height: 440px;
+                width: 300px;
+                height: 300px;
 
                 img {
                     object-fit: cover;
@@ -25,8 +23,7 @@
             }
 
             .sub-image {
-                display: flex;
-                justify-content: space-between;
+                display: none;
                 width: 540px;
 
                 img {
@@ -37,8 +34,9 @@
         }
 
         .product-content {
-            display: grid;
-            grid-template-rows: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
 
             .product-details {
                 display: flex;
@@ -58,7 +56,52 @@
                     font-size: 18px;
                     font-weight: 600;
                 }
+
+                .product-info {
+                    display: none;
+                }
             }
         }
     }
 }
+
+@media (min-width: 768px) {
+    .product {
+        .container {
+            .product-images {
+                display: grid;
+                gap: 30px;
+
+                .main-image {
+                    width: 540px;
+                    height: 440px;
+                }
+
+                .sub-image {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .product {
+        .container {
+            max-width: $max-width-small;
+            grid-template-columns: 1fr 1fr;
+
+            .product-content {
+                text-align: start;
+
+                .product-details {
+                    .product-info {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -2,11 +2,10 @@
     margin-bottom: 80px;
 
     .container {
-        max-width: $max-width-small;
         padding: 0;
 
         .products-title {
-            display: flex;
+            display: none;
             justify-content: space-between;
             margin-bottom: 10px;
 
@@ -17,11 +16,13 @@
 
             .products-btn {
                 width: 70px;
-                display: flex;
+                display: none;
                 justify-content: space-between;
 
                 button {
                     border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
                     background-color: $color-white;
                     border: 1px solid $color-shadow;
                 }
@@ -29,8 +30,28 @@
         }
 
         .products-container {
-            display: flex;
+            display: none;
             justify-content: space-between;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .related-products {
+        .container {
+            max-width: $max-width-small;
+
+            .products-title {
+                display: flex;
+
+                .products-btn {
+                    display: flex;
+                }
+            }
+
+            .products-container {
+                display: flex;
+            }
         }
     }
 }
