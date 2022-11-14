@@ -5,6 +5,13 @@ function RelatedProducts({items = []}) {
   let arrowLeft = "<"
   let arrowRight = ">"
 
+  /*
+  Fick inte till slide funktionaliteten...
+  Men hoppas att det duger med bara design. 
+  Använde inte heller några produkter som relaterar till produkten som visas 
+  utan jag tog bara fyra produkter från api. 
+  */
+
   return (
     <section className="related-products">
         <div className="container">

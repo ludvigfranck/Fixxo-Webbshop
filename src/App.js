@@ -12,11 +12,10 @@ import { ShoppingCartProvider } from './contexts/ShoppingCartContext';
 
 
 function App() {
-
   return (
     <BrowserRouter>
     <ShoppingCartProvider>
-      <ProductProvider>
+    <ProductProvider>
         <Routes>
           <Route path="/" element={<HomeView />} />
           <Route path="/contacts" element={<ContactView />} />

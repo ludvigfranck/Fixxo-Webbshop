@@ -1,28 +1,31 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import { useShoppingCart } from '../contexts/ShoppingCartContext'
 import ProductDetailsLinks from './ProductDetailsLinks'
 
-function ProductForm() {
+function ProductForm({init, item}) {
+const { incrementQuantity } = useShoppingCart()
 const [showColor, setShowColor] = useState(false)
-const [count, setCount] = useState(0)
+const [count, setCount] = useState(init)
 
 const toggleColor = () => {
   setShowColor(current => !current)
 }
 
-const incrementQuantity = () => {
-  setCount(count + 1)
+const increment = () => {
+  setCount(current => current + 1)
 }
 
-const decrementQuantity = () => {
-  setCount(count -1)
+const decrement = () => {
+  setCount(current => current - 1)
 }
 
-useEffect(() => {
-  setCount(count)
-}, [setCount])
+const handleSubmit = (e) => {
+  e.preventDefault()
+}
 
-  return (
-    <form>
+return (
+  <div className="product-form">
+    <form onSubmit={handleSubmit}>
       <h5>Size:</h5>
       <div className="size">
         <ul className='size-list'>
@@ -77,11 +80,11 @@ useEffect(() => {
       <h5>Qty:</h5>
       <div className="submit">
         <div className="quantity-box">
-          <button onClick={incrementQuantity}>+</button>
-            <span className="quantity">{count}</span>
-          <button onClick={decrementQuantity}>-</button>
+          <button onClick={() => increment()}>+</button>
+            <span className="quantity" data-testid="count">{count}</span>
+          <button onClick={() => decrement()}>-</button>
         </div>
-        <button type="submit" className="submit-btn">ADD TO CART</button>
+        <button onClick={() => incrementQuantity({articleNumber: item.articleNumber, product: item})} type="submit" className="submit-btn">ADD TO CART</button>
       </div>
 
       <h5>Share:</h5>
@@ -94,8 +97,9 @@ useEffect(() => {
           <ProductDetailsLinks link="https://linkedin.com" icon="fa-brands fa-linkedin" />
         </ul>
       </div>
-    </form>   
-  )
+    </form> 
+  </div>
+)
 }
 
 export default ProductForm
