@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProductCard from '../components/ProductCard'
 
 function ProductGrid({title, items = []}) {
