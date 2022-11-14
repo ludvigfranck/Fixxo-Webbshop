@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Banners from '../sections/Banners'
 import Flashsale from '../sections/Flashsale'
 import CustomerInfo from '../sections/CustomerInfo'
@@ -17,24 +17,26 @@ function HomeView() {
   window.top.document.title = "Fixxo."
 
   const { featuredProducts, getFeaturedProducts } = useProductContext()
+  const { flashsaleProducts, getFlashsaleProducts } = useProductContext()
 
   useEffect(() => {
     getFeaturedProducts(8)
+    getFlashsaleProducts(4)
   }, [])
 
   return (
     <>
       <HomeViewHeader />
-      {/* <NewArrivals /> */}
+      <NewArrivals />
       <ProductGrid title="FEATURED PRODUCTS" items={featuredProducts}/>
-      {/* <Banners />
+      <Banners />
       <SpecialitySection />
-      <Flashsale items={flashsaleProducts} /> */}
-      {/* <TopPicks items={flashsaleProducts} /> */}
-      {/* <DiscountSection />
+      <Flashsale items={flashsaleProducts} />
+      <TopPicks items={flashsaleProducts} />
+      <DiscountSection />
       <SaleGridSection />
       <CustomerInfo />
-      <Footer /> */}
+      <Footer />
     </>
   )
 }

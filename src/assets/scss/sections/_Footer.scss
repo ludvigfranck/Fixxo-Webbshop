@@ -1,4 +1,9 @@
 footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
     border-top: 1px solid $linear-gradient-dark;
     background-color: $linear-gradient-light;
 

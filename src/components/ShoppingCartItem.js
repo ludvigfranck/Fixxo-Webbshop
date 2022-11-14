@@ -13,7 +13,7 @@ function ShoppingCartItem({ item }) {
                 <div className="item-info-name">{item.product.name}</div>
                 <div className="item-info-quantity">
                     <button onClick={() => incrementQuantity(item.product)}>+</button>
-                    <span>{item.quantity}</span>
+                    <div>{item.quantity}</div>
                     <button onClick={() => decrementQuantity(item.product)}>-</button>
                 </div>
             </div>

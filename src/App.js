@@ -15,7 +15,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <ShoppingCartProvider>
+    <ShoppingCartProvider>
       <ProductProvider>
         <Routes>
           <Route path="/" element={<HomeView />} />

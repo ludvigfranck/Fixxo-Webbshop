@@ -1,5 +1,5 @@
 .product {
-
+    margin-bottom: 60px;
 
     .container {
         max-width: $max-width-small;
@@ -37,12 +37,10 @@
         }
 
         .product-content {
-            border: 1px solid black;
             display: grid;
             grid-template-rows: 1fr 1fr;
 
             .product-details {
-                border: 1px solid black;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -60,10 +58,6 @@
                     font-size: 18px;
                     font-weight: 600;
                 }
-            }
-
-            .product-form {
-                border: 1px solid red;
             }
         }
     }

@@ -1,0 +1,12 @@
+.product-text {
+    margin-bottom: 50px;
+
+    .container {
+        max-width: $max-width-small;
+        padding: 0;
+    }
+
+    .active {
+        color: $color-theme;
+    }
+}

@@ -1,25 +1,32 @@
 import React, { useEffect } from 'react'
-import Footer from '../sections/Footer'
+import FixedFooter from '../sections/FixedFooter'
 import Navbar from '../sections/Navbar'
 import ProductDetails from '../sections/ProductDetails'
 import Breadcrumb from '../sections/Breadcrumb'
 import { useProductContext } from '../contexts/ProductContext'
 import { useParams } from 'react-router-dom'
+import ProductInfoText from '../sections/ProductInfoText'
+import RelatedProducts from '../sections/RelatedProducts'
+
 
 function ProductDetailsView() {
-  const {id} = useParams()
-  const {product, getProduct} = useProductContext() 
+const {id} = useParams()
+const {product, getProduct} = useProductContext() 
+const { relatedProducts, getRelatedProducts } = useProductContext()
 
-  useEffect(() => {
-    getProduct(id)
-  }, [])
+useEffect(() => {
+  getProduct(id)
+  getRelatedProducts(4)
+}, [])
   
 return (
     <>
     <Navbar />
     <Breadcrumb parentPage="Products" currentPage={product.name} />
     <ProductDetails item={product} />
-    <Footer />
+    <ProductInfoText />
+    <RelatedProducts items={relatedProducts} />
+    <FixedFooter />
     </>
   )
 }

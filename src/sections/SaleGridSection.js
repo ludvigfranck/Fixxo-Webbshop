@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SaleCards from '../components/SaleCards'
+import { useProductContext } from '../contexts/ProductContext'
 
 function SaleGridSection() {
-
+  const { saleProducts, getSaleProducts } = useProductContext()
 
   const [showCardsLP, setShowCardsLP] = useState(false)
   const [showCardsBSP, setShowCardsBSP] = useState(false)
   const [showCardsTRP, setShowCardsTRP] = useState(false)
+
+  useEffect(() => {
+    getSaleProducts(3)
+  }, [])
 
   const toggleCards = (e) => {
     const card = e.target
@@ -46,7 +51,7 @@ function SaleGridSection() {
         <div className="__sale-grid-products">
           <h1>Latest Products</h1>
           <div className={`__sale-grid-cards ${showCardsLP ? "d-flex" : ""}`}>
-            <SaleCards />
+            <SaleCards items={saleProducts} />
           </div>
           <button onClick={toggleCards} className="__sale-grid-btn d-lg-none" id="__toggle-LP">
             Show More
@@ -56,7 +61,7 @@ function SaleGridSection() {
         <div className="__sale-grid-products">
           <h1>Best Selling Product</h1>
           <div className={`__sale-grid-cards ${showCardsBSP ? "d-flex" : ""}`}>
-            <SaleCards />
+            <SaleCards items={saleProducts} />
           </div>
           <button onClick={toggleCards} className="__sale-grid-btn d-lg-none" id="__toggle-BSP">
             Show More
@@ -66,7 +71,7 @@ function SaleGridSection() {
         <div className="__sale-grid-products">
           <h1>Top Reacted Product</h1>
           <div className={`__sale-grid-cards ${showCardsTRP ? "d-flex" : ""}`}>
-            <SaleCards />
+            <SaleCards items={saleProducts} />
           </div>
           <button onClick={toggleCards} className="__sale-grid-btn d-lg-none" id="__toggle-TRP">
             Show More
